@@ -59,7 +59,8 @@ def brute_force_password() -> None:
                 if password not in found_passwords:
                     found_passwords.add(password)
                     print(password)
-                    return
+                    if len(found_passwords) == len(PASSWORDS_TO_BRUTE_FORCE):
+                        return
 
 
 if __name__ == "__main__":
